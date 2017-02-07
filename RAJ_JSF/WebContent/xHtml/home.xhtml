@@ -1,0 +1,44 @@
+<?xml version= "1.0" encoding= "UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets">
+<h:head>
+	<title>JSF Tutorial!</title>
+</h:head>
+<h:body>
+
+
+	<div class="hmessage">
+		<h2 style="color: #994930;">JSF</h2>
+	</div>
+	<h1 style="text-align: center;">
+		<b> #{helloWorld.message}</b>
+	</h1>
+	<h:form action="" method="get" style="text-align: center;">
+		<h:commandButton action="#{helloWorld.moveToLogin}" value="Login" />
+	</h:form>
+	<br></br>
+	<h:form style="text-align: center;">
+		<h:commandButton action="#{helloWorld.moveToRegistration}"
+			value="Registration" />
+	</h:form>
+	<br />
+	<div style="text-align:center;">
+	<h:form>
+		<h:commandLink action="#{navigationController.showPage}" value="Page1">
+			<f:param name="pageId" value="3" />
+		</h:commandLink>
+		<h:outputText value="&nbsp;" />  &nbsp;&nbsp; 
+		<h:commandLink action="#{navigationController.showPage}" value="Page2">
+			<f:param name="pageId" value="4" />
+		</h:commandLink>
+		<h:outputText value="&nbsp;" />
+		<br />
+		<br />
+	</h:form>
+	</div>
+</h:body>
+</html>

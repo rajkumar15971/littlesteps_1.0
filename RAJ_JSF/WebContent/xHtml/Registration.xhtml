@@ -1,0 +1,62 @@
+<?xml version= "1.0" encoding= "UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets">
+<h:head>
+	<title>JSF Registration</title>
+	<style>
+#formdiv {
+	margin-left: 530px;
+	margin-right: auto;
+	margin-bottom: auto;
+	padding: 5px;
+}
+</style>
+</h:head>
+<h:body>
+	<h3 style="text-align: center;">
+		<b> JSF REGISTRATION </b>
+	</h3>
+	<div id="formdiv">
+		<h:form>
+			<label>First Name:</label> &nbsp; <h:inputText id="fname"></h:inputText>
+			<br />
+			<br />
+			<label>Last Name:</label> &nbsp;&nbsp; <h:inputText id="lname"></h:inputText>
+			<br />
+			<br />
+			<label>User Name:</label> &nbsp;<h:inputText id="username"></h:inputText>
+			<br />
+			<br />
+			<label>E-mail:</label> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <h:inputText
+				id="email"></h:inputText>
+			<br />
+			<br />
+			<label>Password:</label> &nbsp;&nbsp;&nbsp;<h:inputSecret />
+			<br />
+			<br />
+			<h:selectManyListbox id="hobies">
+				<f:selectItem id="item1" itemLabel="News" itemValue="1" />
+				<f:selectItem id="item2" itemLabel="Sports" itemValue="2" />
+				<f:selectItem id="item3" itemLabel="Music" itemValue="3" />
+				<f:selectItem id="item4" itemLabel="Java" itemValue="4" />
+				<f:selectItem id="item5" itemLabel="Web" itemValue="5" />
+
+			</h:selectManyListbox>
+			<div style="margin-left: 100px;">
+				<h:commandButton value="Register"></h:commandButton>
+			</div>
+			<br />
+			<label>Already, have an account:</label>
+			<h:commandButton action="#{registration.moveToLogin}" value="Login"></h:commandButton>
+			<br />
+			<br />
+			<h:commandButton action="#{registration.moveToHOme}" value="Home"
+					style="margin-left:100px;"></h:commandButton>
+		</h:form>
+	</div>
+</h:body>
+</html>
